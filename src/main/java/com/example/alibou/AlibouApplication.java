@@ -10,16 +10,8 @@ import java.util.Collections;
 public class AlibouApplication {
 
 	public static void main(String[] args) {
+		SpringApplication.run( AlibouApplication.class ,args);
 
-	var app = new SpringApplication(AlibouApplication.class);
-	app.setDefaultProperties(Collections.singletonMap("spring.profiles.active","dev"));
-	var ctx = 	app.run( args);
-
-		MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
-
-		System.out.println(myFirstService.tellAStory());
-		System.out.println(myFirstService.getCustomProperties());
-		System.out.println(myFirstService.getCustomPropertiesInt());
 
 	}
 
